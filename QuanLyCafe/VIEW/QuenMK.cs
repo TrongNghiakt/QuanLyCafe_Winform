@@ -15,6 +15,7 @@ using System.Windows.Forms;
 
 namespace QuanLyCafe.VIEW
 {
+    // hello
     public partial class QuenMK : Form
     {
         public QuenMK()
