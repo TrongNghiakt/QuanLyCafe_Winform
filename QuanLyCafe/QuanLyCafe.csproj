@@ -1,0 +1,702 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1340B234-A838-45BF-B6E7-45D88A8037FC}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>QuanLyCafe</RootNamespace>
+    <AssemblyName>QuanLyCafe</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Bunifu.UI.WinForms.1.5.3">
+      <HintPath>C:\Users\DELL\Downloads\bunifu.ui.winforms.4.1.1\Bunifu.UI.WinForms.1.5.3.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuProgressBar">
+      <HintPath>C:\Users\DELL\Downloads\bunifu.ui.winforms.4.1.1\Bunifu.UI.WinForms.BunifuProgressBar.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuSlider">
+      <HintPath>C:\Users\DELL\Downloads\bunifu.ui.winforms.4.1.1\Bunifu.UI.WinForms.BunifuSlider.dll</HintPath>
+    </Reference>
+    <Reference Include="Guna.UI2, Version=2.0.4.6, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
+      <HintPath>..\packages\Guna.UI2.WinForms.2.0.4.6\lib\net472\Guna.UI2.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1620.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1620.0\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1620.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1620.0\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1620.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="SipaaFramework, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\SipaaFramework.1.1.0\lib\net46\SipaaFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Runtime.Extensions, Version=4.1.1.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.Extensions.4.3.1\lib\net462\System.Runtime.Extensions.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DAO\CustomerDAO.cs" />
+    <Compile Include="DAO\DataProvider.cs" />
+    <Compile Include="DAO\employeeDAO.cs" />
+    <Compile Include="DAO\HDDAO.cs" />
+    <Compile Include="DAO\loginDAO.cs" />
+    <Compile Include="DAO\menuDAO.cs" />
+    <Compile Include="DAO\warehouseDAO.cs" />
+    <Compile Include="SqlServerTypes\Loader.cs" />
+    <Compile Include="VIEW\FormDangNhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VIEW\FormDangNhap.Designer.cs">
+      <DependentUpon>FormDangNhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VIEW\FormManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VIEW\FormManager.Designer.cs">
+      <DependentUpon>FormManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VIEW\FormStaff.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VIEW\FormStaff.Designer.cs">
+      <DependentUpon>FormStaff.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="VIEW\QuenMK.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VIEW\QuenMK.Designer.cs">
+      <DependentUpon>QuenMK.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VIEW\Themmon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VIEW\Themmon.Designer.cs">
+      <DependentUpon>Themmon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VIEW\UC\Bill.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="VIEW\UC\Bill.Designer.cs">
+      <DependentUpon>Bill.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VIEW\UC\changepass.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="VIEW\UC\changepass.Designer.cs">
+      <DependentUpon>changepass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VIEW\UC\Customer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="VIEW\UC\Customer.Designer.cs">
+      <DependentUpon>Customer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VIEW\UC\drink.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="VIEW\UC\drink.Designer.cs">
+      <DependentUpon>drink.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VIEW\UC\employee.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="VIEW\UC\employee.Designer.cs">
+      <DependentUpon>employee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VIEW\UC\Home.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="VIEW\UC\Home.Designer.cs">
+      <DependentUpon>Home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VIEW\UC\itemware.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="VIEW\UC\itemware.Designer.cs">
+      <DependentUpon>itemware.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VIEW\UC\listware.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="VIEW\UC\listware.Designer.cs">
+      <DependentUpon>listware.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VIEW\UC\menus.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="VIEW\UC\menus.Designer.cs">
+      <DependentUpon>menus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VIEW\UC\profit.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="VIEW\UC\profit.Designer.cs">
+      <DependentUpon>profit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VIEW\UC\update.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="VIEW\UC\update.Designer.cs">
+      <DependentUpon>update.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VIEW\UC\viewinform.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="VIEW\UC\viewinform.Designer.cs">
+      <DependentUpon>viewinform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VIEW\UC\Warehosue.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="VIEW\UC\Warehosue.Designer.cs">
+      <DependentUpon>Warehosue.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VIEW\Updateinform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VIEW\Updateinform.Designer.cs">
+      <DependentUpon>Updateinform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VIEW\XuatHD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VIEW\XuatHD.Designer.cs">
+      <DependentUpon>XuatHD.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="VIEW\FormDangNhap.resx">
+      <DependentUpon>FormDangNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VIEW\FormManager.resx">
+      <DependentUpon>FormManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VIEW\FormStaff.resx">
+      <DependentUpon>FormStaff.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VIEW\QuenMK.resx">
+      <DependentUpon>QuenMK.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VIEW\Themmon.resx">
+      <DependentUpon>Themmon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VIEW\UC\Bill.resx">
+      <DependentUpon>Bill.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VIEW\UC\changepass.resx">
+      <DependentUpon>changepass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VIEW\UC\Customer.resx">
+      <DependentUpon>Customer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VIEW\UC\drink.resx">
+      <DependentUpon>drink.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VIEW\UC\employee.resx">
+      <DependentUpon>employee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VIEW\UC\Home.resx">
+      <DependentUpon>Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VIEW\UC\itemware.resx">
+      <DependentUpon>itemware.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VIEW\UC\listware.resx">
+      <DependentUpon>listware.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VIEW\UC\menus.resx">
+      <DependentUpon>menus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VIEW\UC\profit.resx">
+      <DependentUpon>profit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VIEW\UC\update.resx">
+      <DependentUpon>update.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VIEW\UC\viewinform.resx">
+      <DependentUpon>viewinform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VIEW\UC\Warehosue.resx">
+      <DependentUpon>Warehosue.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VIEW\Updateinform.resx">
+      <DependentUpon>Updateinform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VIEW\XuatHD.resx">
+      <DependentUpon>XuatHD.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\z5257881339161_b564192411e529e97bbfa1325c65bb7c %281%29_preview_rev_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\eye-password-hide.512x512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\eye-empty.256x176 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\coffee-icon-png-13680.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\z5257881339161_b564192411e529e97bbfa1325c65bb7c %281%29_preview_rev_11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngwing.com %2810%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\round-account-button-with-user-inside.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngegg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hamburger_button_menu_icon_155296.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\z5257881339161_b564192411e529e97bbfa1325c65bb7c %281%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home-button_4849108.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\order_6100464.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\transparent-line-logo-black-and-white-icon-fileemojione-bw-1f4c3-svg-wikimedia-commons5dbd8220d96900.3689949115727007048905 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngegg %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\abacus_4523643.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gift-voucher_2575222.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\multiple-users-silhouette_33308.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rating_4230661.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\transparent-coffee-651982c4579ca1.7945946016961706923589.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\toppng.com-double-chocolate-frappé-mccafe-double-chocolate-frappe-304x465.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sundae-crepe-cream-pancake-white-chocolate-ice-cream-5d25cbefdf2094213f21a937cd7b3779.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\trangtri.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Trasuachantrau.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngegg %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngegg %284%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngegg %285%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngegg %286%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kisspng-water-softening-glass-drinking-water-filter-dussehra-5acc54a3def7c1.8450377915233404519133.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vecteezy_ai-generated-vanilla-latte-latte-with-vanilla-syrup-on_36161831.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngwing.com %284%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\transparent-coffee-651982c4579ca1.79459460169617069235891.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngwing.com %285%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kisspng-vietnamese-iced-coffee-vietnamese-cuisine-pho-ca-phe-sua-da-pho-na-vietnamese-food-5cf0c90a026db7.34874810155928397801.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngwing.com %286%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\64cb34c02172e.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kisspng-yogurt-cows-milk-breakfast-panna-cotta-fruit-yogurt-5a804d6400c410.0680003315183578600031.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kisspng-lager-wheat-beer-cup-drink-draught-beer-beer-5aa2882d775c37.1781894115206011334889.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\64e4c0f0c4b5b.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\64e4c0f0c4b5b1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\64d9bd6ea5c64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kisspng-vietnamese-iced-coffee-white-russian-coffee-milk-5b3bd0f4185556.2345977815306467720997.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngegg %2810%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\trangtri1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\january-black-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\february-black-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\march-black-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\april-black-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\may-black-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\june-black-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\july-black-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\august-black-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\september-black-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\october-black-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\november-black-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\december-black-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\year-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngwing.com %288%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngwing.com %287%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="DTO\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\favpng_editing-vector-graphics-editor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\reset_password.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\favpng_login-favicon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Lovepik_com-401583346-autumn-leaves.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PngItem_55638.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Lovepik_com-401583346-autumn-leaves1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Fall-Leaves-PNG-Images.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngwing.com %2811%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngegg %2811%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngegg %2815%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngwing.com %2814%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PngItem_556381.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Lovepik_com-401583346-autumn-leaves2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngegg %2814%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngegg %2813%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngwing.com %2814%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\transparent-coffee-cup-648566cd5a6568.4516076716864642053703.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\transparent-coffee-vibrant-black-and-orange-coffee-cup-art65ed99924ff452.9856599117100701623275.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\transparent-coffee-coffee-cup-with-white-flowers-on-black65eda28fafcfe3.1416006817100724637201.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngegg %2814%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\5a28f00fadccb1.9132976015126323357119.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngwing.com %2816%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Lovepik_com-380147781-hand-painted-simple-wooden-sign-board-signpost-wooden-texture-wooden-signposts - Copy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sdfghj.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\62858PICu6nas158PICqakF5G_PIC2018.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Fall-Leaves-PNG-Images1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\transparent-coffee-6424fa6336d2c6.6338227216801449952246.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vecteezy_hand-drawn-leaf-with-an-aesthetic-shape-or-aesthetic-blob_22221621.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngegg %2811%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\5a28f00fadccb1.91329760151263233571191.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\imgbin_light-red-simple-crown-decoration-pattern-png.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngwing.com %2818%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\transparent-coffee-cup-648566cd5a6568.45160767168646420537031.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fasda.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fasda1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NicePng_star-line-png_2742435.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NicePng_white-star-png_89093.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngwing.com %284%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngwing.com %2810%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngwing.com %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngwing.com %2811%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngwing.com %281%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NicePng_white-star-png_890931.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NicePng_shooting-star-png_120062.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngwing.com %289%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngwing.com %286%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngwing.com %2812%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngwing.com %2813%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NicePng_star-line-png_27424351.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngwing.com %2815%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngwing.com %287%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kisspng-coffee-bean-espresso-cafe-coffee-5a8ebd82caf8b9.7916295815193040668314.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\transparent-coffee-beans-650c1bdf342a34.9060980316952923832137.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngwing.com %2814%292.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\transparent-coffee-vibrant-black-and-orange-coffee-cup-art65ed99924ff452.98565991171007016232751.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vecteezy_hand-drawn-leaf-with-an-aesthetic-shape-or-aesthetic-blob_222216211.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fasda2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngwing.com %2811%292.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Lovepik_com-380147781-hand-painted-simple-wooden-sign-board-signpost-wooden-texture-wooden-signposts - Copy1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\62858PICu6nas158PICqakF5G_PIC20181.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bar1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kisspng-image-editing-clip-art-stone-road-deductible-png-5a8a3a08e86b19.683816011519008264952.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fasda3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bar2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\transparent-coffee-vibrant-black-and-orange-coffee-cup-art65ed99924ff452.98565991171007016232752.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngwing.com %288%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fasda4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
